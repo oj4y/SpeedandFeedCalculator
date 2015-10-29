@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateIpm(Double.parseDouble(iptS), Double.parseDouble(noTeethS),
+                result = calculateIpm(Double.parseDouble(iptS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 ipmIPM.setText("IPM");
@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateIpm(Double.parseDouble(iptS), Double.parseDouble(noTeethS),
+                result = calculateIpm(Double.parseDouble(iptS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 ipmIPM.setText("IPM");
@@ -245,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateIpm(Double.parseDouble(iptS), Double.parseDouble(noTeethS),
+                result = calculateIpm(Double.parseDouble(iptS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 ipmIPM.setText("IPM");
@@ -277,7 +277,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateIpt(Double.parseDouble(ipmS), Double.parseDouble(noTeethS),
+                result = calculateIpt(Double.parseDouble(ipmS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 iptIPT.setText("IPT");
@@ -308,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateIpt(Double.parseDouble(ipmS), Double.parseDouble(noTeethS),
+                result = calculateIpt(Double.parseDouble(ipmS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 iptIPT.setText("IPT");
@@ -339,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateIpt(Double.parseDouble(ipmS), Double.parseDouble(noTeethS),
+                result = calculateIpt(Double.parseDouble(ipmS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 iptIPT.setText("IPT");
@@ -571,11 +571,11 @@ public class MainActivity extends AppCompatActivity {
         return 3.82 * sfm / dia;
     }
 
-    private double calculateIpm(double ipt, double noTeeth, int rpm) {
+    private double calculateIpm(double ipt, int noTeeth, int rpm) {
         return ipt * noTeeth * rpm;
     }
 
-    private double calculateIpt(double ipm, double noTeeth, int rpm) {
+    private double calculateIpt(double ipm, int noTeeth, int rpm) {
         return ipm / (noTeeth * rpm);
     }
 
