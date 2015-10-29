@@ -1,5 +1,6 @@
 package com.ojcity.speedandfeedcalculator;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -656,6 +657,11 @@ public class MainActivity extends AppCompatActivity {
                 clearForm((ViewGroup) findViewById(R.id.main_layout));
             }
         });
+
+        // hide fab on landscape
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            fab.hide();
+        }
 
     }
 
