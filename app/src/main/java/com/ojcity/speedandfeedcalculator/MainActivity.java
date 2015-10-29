@@ -1,11 +1,14 @@
 package com.ojcity.speedandfeedcalculator;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView hpHP;
     private EditText hpCIM;
     private EditText hpUHP;
+
+    private FloatingActionButton fab;
 
     private double sfmN = 1;
     private double rpmN = 1;
@@ -644,6 +649,14 @@ public class MainActivity extends AppCompatActivity {
         hpCIM.addTextChangedListener(hpCimTextWatcher);
         hpUHP.addTextChangedListener(hpUhpTextWatcher);
 
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearForm((ViewGroup) findViewById(R.id.main_layout));
+            }
+        });
+
     }
 
     @Override
@@ -666,5 +679,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void clearForm(ViewGroup group) {
+        for (int i = 0, count = group.getChildCount(); i < count; ++i) {
+            View view = group.getChildAt(i);
+            if (view instanceof EditText) {
+                ((EditText) view).setText("");
+            }
+
+            if (view instanceof ViewGroup && (((ViewGroup) view).getChildCount() > 0))
+                clearForm((ViewGroup) view);
+        }
     }
 }
