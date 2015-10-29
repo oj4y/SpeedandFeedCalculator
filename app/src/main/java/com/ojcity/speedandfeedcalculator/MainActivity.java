@@ -1,7 +1,7 @@
 package com.ojcity.speedandfeedcalculator;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateSfm(Double.parseDouble(rpmS), Double.parseDouble(diaS));
+                result = calculateSfm(Integer.parseInt(rpmS), Double.parseDouble(diaS));
             } catch (NumberFormatException e) {
                 sfmSFM.setText("SFM");
                 return;
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateSfm(Double.parseDouble(rpmS), Double.parseDouble(diaS));
+                result = calculateSfm(Integer.parseInt(rpmS), Double.parseDouble(diaS));
             } catch (NumberFormatException e) {
                 sfmSFM.setText("SFM");
                 return;
@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 result = calculateIpm(Double.parseDouble(iptS), Double.parseDouble(noTeethS),
-                        Double.parseDouble(rpmS));
+                        Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 ipmIPM.setText("IPM");
                 return;
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 result = calculateIpm(Double.parseDouble(iptS), Double.parseDouble(noTeethS),
-                        Double.parseDouble(rpmS));
+                        Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 ipmIPM.setText("IPM");
                 return;
@@ -246,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 result = calculateIpm(Double.parseDouble(iptS), Double.parseDouble(noTeethS),
-                        Double.parseDouble(rpmS));
+                        Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 ipmIPM.setText("IPM");
                 return;
@@ -278,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 result = calculateIpt(Double.parseDouble(ipmS), Double.parseDouble(noTeethS),
-                        Double.parseDouble(rpmS));
+                        Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 iptIPT.setText("IPT");
                 return;
@@ -309,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 result = calculateIpt(Double.parseDouble(ipmS), Double.parseDouble(noTeethS),
-                        Double.parseDouble(rpmS));
+                        Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 iptIPT.setText("IPT");
                 return;
@@ -340,7 +340,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 result = calculateIpt(Double.parseDouble(ipmS), Double.parseDouble(noTeethS),
-                        Double.parseDouble(rpmS));
+                        Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 iptIPT.setText("IPT");
                 return;
@@ -370,7 +370,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateIpr(Double.parseDouble(ipmS), Double.parseDouble(rpmS));
+                result = calculateIpr(Double.parseDouble(ipmS), Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 iprIPR.setText("IPR");
                 return;
@@ -399,7 +399,7 @@ public class MainActivity extends AppCompatActivity {
             double result;
 
             try {
-                result = calculateIpr(Double.parseDouble(ipmS), Double.parseDouble(rpmS));
+                result = calculateIpr(Double.parseDouble(ipmS), Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
                 iprIPR.setText("IPR");
                 return;
@@ -563,7 +563,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private double calculateSfm(double rpm, double dia) {
+    private double calculateSfm(int rpm, double dia) {
         return rpm * dia / 3.82;
     }
 
@@ -571,15 +571,15 @@ public class MainActivity extends AppCompatActivity {
         return 3.82 * sfm / dia;
     }
 
-    private double calculateIpm(double ipt, double noTeeth, double rpm) {
+    private double calculateIpm(double ipt, double noTeeth, int rpm) {
         return ipt * noTeeth * rpm;
     }
 
-    private double calculateIpt(double ipm, double noTeeth, double rpm) {
+    private double calculateIpt(double ipm, double noTeeth, int rpm) {
         return ipm / (noTeeth * rpm);
     }
 
-    private double calculateIpr(double ipm, double rpm) {
+    private double calculateIpr(double ipm, int rpm) {
         return ipm / rpm;
     }
 
