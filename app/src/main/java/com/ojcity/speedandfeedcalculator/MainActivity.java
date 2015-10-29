@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -680,7 +682,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+            MaterialDialog aboutDialog = new MaterialDialog.Builder(this)
+                    .title(R.string.about_title)
+                    .content(R.string.about_content)
+                    .show();
             return true;
         }
 
