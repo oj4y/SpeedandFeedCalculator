@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--START CIM-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/cim_cim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_weight="1"
+        android:maxLines="5"
+        android:paddingLeft="8dp"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:text="CIM"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/activity_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="="
+        android:textSize="@dimen/activity_text_size" />
+
+    <EditText
+        android:id="@+id/cim_fd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Fd."
+        android:inputType="numberDecimal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:selectAllOnFocus="true"
+        android:textSize="@dimen/activity_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="×"
+        android:textSize="@dimen/activity_text_size" />
+
+    <EditText
+        android:id="@+id/cim_woc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="WOC"
+        android:inputType="numberDecimal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:selectAllOnFocus="true"
+        android:textSize="@dimen/activity_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="×"
+        android:textSize="@dimen/activity_text_size" />
+
+    <EditText
+        android:id="@+id/cim_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="DOC"
+        android:inputType="numberDecimal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:selectAllOnFocus="true"
+        android:textSize="@dimen/activity_text_size" />
+
+</LinearLayout><!-- END CIM -->

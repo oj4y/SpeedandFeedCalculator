@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><!--START RPM-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/rpm_rpm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_weight="1"
+        android:maxLines="5"
+        android:paddingLeft="8dp"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:text="RPM"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/activity_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="="
+        android:textSize="@dimen/activity_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="3.82"
+        android:textSize="@dimen/activity_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="×"
+        android:textSize="@dimen/activity_text_size" />
+
+    <EditText
+        android:id="@+id/rpm_sfm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="SFM"
+        android:inputType="numberDecimal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:selectAllOnFocus="true"
+        android:textSize="@dimen/activity_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="÷"
+        android:textSize="@dimen/activity_text_size" />
+
+    <EditText
+        android:id="@+id/rpm_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Dia"
+        android:inputType="numberDecimal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:selectAllOnFocus="true"
+        android:textSize="@dimen/activity_text_size" />
+
+</LinearLayout><!-- END RPM -->
