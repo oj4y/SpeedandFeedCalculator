@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private TextView sfmSFM;
+    //    private EditText sfmSFM;
     private EditText sfmRPM;
     private EditText sfmDia;
 
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 result = calculateSfm(Integer.parseInt(rpmS), Double.parseDouble(diaS));
             } catch (NumberFormatException e) {
-                sfmSFM.setText("SFM");
+                sfmSFM.setText("");
                 return;
             }
 
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 result = calculateSfm(Integer.parseInt(rpmS), Double.parseDouble(diaS));
             } catch (NumberFormatException e) {
-                sfmSFM.setText("SFM");
+                sfmSFM.setText("");
                 return;
             }
 
@@ -134,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 result = calculateRpm(Double.parseDouble(sfmS), Double.parseDouble(diaS));
             } catch (NumberFormatException e) {
-                rpmRPM.setText("RPM");
+                rpmRPM.setText("");
                 return;
             }
 
@@ -162,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 result = calculateRpm(Double.parseDouble(sfmS), Double.parseDouble(diaS));
             } catch (NumberFormatException e) {
-                rpmRPM.setText("RPM");
+                rpmRPM.setText("");
                 return;
             }
 
@@ -194,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateIpm(Double.parseDouble(iptS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
-                ipmIPM.setText("IPM");
+                ipmIPM.setText("");
                 return;
             }
 
@@ -225,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateIpm(Double.parseDouble(iptS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
-                ipmIPM.setText("IPM");
+                ipmIPM.setText("");
                 return;
             }
 
@@ -256,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateIpm(Double.parseDouble(iptS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
-                ipmIPM.setText("IPM");
+                ipmIPM.setText("");
                 return;
             }
 
@@ -288,7 +289,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateIpt(Double.parseDouble(ipmS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
-                iptIPT.setText("IPT");
+                iptIPT.setText("");
                 return;
             }
 
@@ -319,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateIpt(Double.parseDouble(ipmS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
-                iptIPT.setText("IPT");
+                iptIPT.setText("");
                 return;
             }
 
@@ -350,7 +351,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateIpt(Double.parseDouble(ipmS), Integer.parseInt(noTeethS),
                         Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
-                iptIPT.setText("IPT");
+                iptIPT.setText("");
                 return;
             }
 
@@ -380,7 +381,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 result = calculateIpr(Double.parseDouble(ipmS), Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
-                iprIPR.setText("IPR");
+                iprIPR.setText("");
                 return;
             }
 
@@ -409,7 +410,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 result = calculateIpr(Double.parseDouble(ipmS), Integer.parseInt(rpmS));
             } catch (NumberFormatException e) {
-                iprIPR.setText("IPR");
+                iprIPR.setText("");
                 return;
             }
 
@@ -441,7 +442,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateCim(Double.parseDouble(fdS), Double.parseDouble(wocS),
                         Double.parseDouble(docS));
             } catch (NumberFormatException e) {
-                cimCIM.setText("CIM");
+                cimCIM.setText("");
                 return;
             }
 
@@ -472,7 +473,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateCim(Double.parseDouble(fdS), Double.parseDouble(wocS),
                         Double.parseDouble(docS));
             } catch (NumberFormatException e) {
-                cimCIM.setText("CIM");
+                cimCIM.setText("");
                 return;
             }
 
@@ -503,7 +504,7 @@ public class MainActivity extends AppCompatActivity {
                 result = calculateCim(Double.parseDouble(fdS), Double.parseDouble(wocS),
                         Double.parseDouble(docS));
             } catch (NumberFormatException e) {
-                cimCIM.setText("CIM");
+                cimCIM.setText("");
                 return;
             }
 
@@ -533,7 +534,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 result = calculateHp(Double.parseDouble(cimS), Double.parseDouble(uhpS));
             } catch (NumberFormatException e) {
-                hpHP.setText("HP");
+                hpHP.setText("");
                 return;
             }
 
@@ -562,7 +563,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 result = calculateHp(Double.parseDouble(cimS), Double.parseDouble(uhpS));
             } catch (NumberFormatException e) {
-                hpHP.setText("HP");
+                hpHP.setText("");
                 return;
             }
 
@@ -604,6 +605,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        sfmSFM = (EditText) findViewById(R.id.sfm_sfm);
         sfmSFM = (TextView) findViewById(R.id.sfm_sfm);
         sfmRPM = (EditText) findViewById(R.id.sfm_rpm);
         sfmDia = (EditText) findViewById(R.id.sfm_dia);
